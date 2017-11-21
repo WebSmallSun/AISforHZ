@@ -14,6 +14,11 @@ BOT_NAME = 'AISforHZ'
 SPIDER_MODULES = ['AISforHZ.spiders']
 NEWSPIDER_MODULE = 'AISforHZ.spiders'
 
+POSTGRES_HOST = 'localhost'
+POSTGRES_PORT = 5432
+POSTGRES_USER = 'AISforHangzhou'
+POSTGRES_PWD  = 'aisforhangzhou'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'AISforHZ (+http://www.yourdomain.com)'
@@ -67,6 +72,10 @@ ROBOTSTXT_OBEY = True
 #ITEM_PIPELINES = {
 #    'AISforHZ.pipelines.AisforhzPipeline': 300,
 #}
+
+ITEM_PIPELINES = {
+    'AISforHZ.pipelines.AisforhzPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
